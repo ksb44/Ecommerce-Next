@@ -12,7 +12,7 @@ function slug({ addtoCart, product, variants, clearCart, buynow }) {
   const [service, setService] = React.useState();
   const checkforserviceability = async () => {
     try {
-      let pins = await fetch("http://localhost:3000/api/pincode");
+      let pins = await fetch("https://ecommerce-next-x3mg.onrender.com/api/pincode");
       let pinjson = await pins.json();
       if (pinjson.includes(parseInt(pin))) {
         setService(true);
@@ -31,7 +31,7 @@ function slug({ addtoCart, product, variants, clearCart, buynow }) {
   let [color, setcolor] = useState(product.color);
   let [size, setSize] = useState(product.size);
   const refreshVariant = (newSize, newColor) => {
-    let url = `http://localhost:3000/product/${variants[newColor][newSize]["slug"]}`;
+    let url = `https://ecommerce-next-x3mg.onrender.com/product/${variants[newColor][newSize]["slug"]}`;
     window.location = url;
   };
 
