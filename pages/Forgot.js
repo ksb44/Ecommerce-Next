@@ -7,7 +7,7 @@ function Forgot() {
   let [credential,setCredential]=useState({email:"",password:""});
   const handleSubmit=async(e)=>{
 e.preventDefault()
-const response=await fetch("http://localhost:3000/api/forgot",{
+const response=await fetch("https://ecommerce-next-x3mg.onrender.com/api/forgot",{
   method:"POST",
   headers:{
       "Content-Type":"application/json"
